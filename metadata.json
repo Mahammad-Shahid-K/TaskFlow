@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow",
+  "description": "Smart to-do and productivity Android app powered by Firebase Auth, Cloud Firestore real-time sync, and Gemini AI with Google Search grounding and deep thinking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

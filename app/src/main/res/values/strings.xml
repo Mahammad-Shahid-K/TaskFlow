@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TaskFlow</string>
+    <string name="tagline">Organize fast. Plan smarter with Gemini.</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="sign_in_subtitle">Sync your private tasks across devices in real time, get live productivity insights, and break down goals with Gemini AI.</string>
+    <string name="dashboard_greeting">TaskFlow</string>
+    <string name="add_task">New Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="ask_ai">Ask AI</string>
+    <string name="search_placeholder">Search tasks by title or notes…</string>
+    <string name="delete_task_title">Delete task?</string>
+    <string name="delete_task_message">This permanently removes the task from your cloud workspace.</string>
+    <string name="confirm_delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_task">Save Task</string>
+    <string name="create_task">Create Task</string>
+    <string name="settings_title">Settings</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="ai_assistant_title">TaskFlow AI Coach</string>
+    <string name="ai_assistant_subtitle">Grounded in your tasks • Powered by Gemini</string>
+    <string name="empty_tasks_title">All clear here</string>
+    <string name="empty_tasks_subtitle">Tap New Task to add an item, or ask Gemini AI to break down your next goal.</string>
+    <string name="ai_breakdown_action">Smart Breakdown with AI</string>
+</resources>

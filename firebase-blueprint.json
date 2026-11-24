@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "A user-owned to-do task with priority, category, status, optional due timestamp, and server audit timestamps.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the owning user."
+        },
+        "title": {
+          "type": "string",
+          "description": "Task title (1 to 120 characters)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Task description or AI-assisted action notes (0 to 1000 characters)."
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["LOW", "MEDIUM", "HIGH"],
+          "description": "Task priority level."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["PERSONAL", "WORK", "STUDY", "OTHER"],
+          "description": "Task category."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["PENDING", "IN_PROGRESS", "COMPLETED"],
+          "description": "Current execution status."
+        },
+        "dueDateMillis": {
+          "type": "integer",
+          "description": "Optional due date and time in UTC epoch milliseconds."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server-assigned creation timestamp via FieldValue.serverTimestamp()."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server-assigned last update timestamp via FieldValue.serverTimestamp()."
+        }
+      },
+      "required": [
+        "userId",
+        "title",
+        "description",
+        "priority",
+        "category",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/tasks/{taskId}": {
+      "schema": { "$ref": "#/entities/Task" },
+      "description": "Private tasks subcollection strictly isolated per authenticated user."
+    }
+  }
+}
